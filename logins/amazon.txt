@@ -1,0 +1,20 @@
+// ==UserScript==
+// @name         Website Reminder - Correct Login Option (Amazon)
+// @author       Weng Fei Fung
+// @namespace    http://tampermonkey.net/
+// @version      1.0
+// @description  You ever login on some website that asks if you want to use your Facebook,
+//               Google (and you might have several Google accounts), Amazon, or email or username?
+//               With so many login options on some websites, you may forget which one you signed up with.
+//               This TamperMonkey snippet lets you know the correct login option at the bottom right whenever you visit such websites.
+// @instructions Refer to README.md or http://www.github.com/Siphon880gh
+// @grant        none
+// @match        https://www.imdb.com/
+// ==/UserScript==
+
+(function() {
+    'use strict';
+    let body = document.querySelector("body");
+    body.innerHTML+='<div id="website-reminder" style="background-color:white; position:fixed; bottom:5px; right:5px; z-index:9999; padding-left:5px; padding-right:5px;"><span style="color: #131A22">Weng\'s Reminder:</span> <span style="color: #FF9900">Sign in with Amazon</span></div>';
+
+})();
